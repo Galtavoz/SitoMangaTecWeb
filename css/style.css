@@ -1,0 +1,174 @@
+/* A tutti i tag*/
+* {
+	padding: 0em;
+	margin: 0em;
+}
+
+/*
+Passo 1
+Definire il font
+*/
+html, body{ /*Il tag html va incluso per motivi di retrocompatibilita'*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;/*Definisco i vari font disponibili*/
+	max-width: 2048px;/*Massima larghezza dei contenuti*/
+	margin: auto;/*Imposto il calcolo del margin automatico*/
+	border: 1px solid #ddd;/*Implementazione del bordino grigio a dx e sx*/
+}
+
+a:link{
+	color: white;/*Colore per i link non visitati*/
+}
+
+a:visited{
+	color: white;/*Colore per i link visitati*/
+	/*N.B. e'stato scelto un rosso che faccia contrasto sufficiente con i link non visitati*/
+}
+
+/*
+Passo 2
+Procediamo con l'header
+N.B. e'un header flessibile
+*/
+
+/*
+===============
+SEZIONE HEADER
+===============
+*/
+
+#header{
+	position: fixed;
+	padding: 1.5em;/*Pensato per adattarsi alla dimensione del carattere*/
+	text-align: center;
+	background-color: orange;
+	height: 4%;
+	width: 100%;
+}
+
+#logo{
+	float: left;/*Posiziona il logo a sinistra*/
+}
+
+#header h1{/*Indica tutti gli h1 contenuti nei div con id "header"*/
+	color: white;
+	font-size: 1.5em;/*N.B. tutte le dimensioni dei font vanno espresse in em per una questione di adattabilita*/
+	float: left;
+	padding-left: 1em;
+}
+
+#header p{
+	font-size: 1.3em;
+}
+
+#login{
+	float: right;
+	color: white;
+	font-size: 1.5em;
+	padding-right: 2em;
+}
+
+
+#vetrina {
+    padding-top: 4%;
+    background: url(../img/indexBg.jpg) no-repeat;
+    background-size: 100% 100%;
+    height: 60%;
+	padding-left: 7.5%;
+	float: left;
+}
+
+#boxImgUsrLog {
+	padding-bottom: 1%;
+	padding-left: 1%;
+	padding-bottom: 2.5%;
+}
+
+#imgUsrLog {
+	padding-top: 4%;
+	height: 60%;
+	width: 30%;
+	float: right;
+}
+
+#boxImgVetrina {
+	height: 60%;
+	width: 70%;
+	float: left;
+}
+
+#boxPricipalImg {
+	padding: 5%;
+	padding-right: 1%;
+}
+	
+	
+/*============
+ARTICOLO
+=============*/
+
+#boxTitolo{
+	font-size: 1.5em;
+	color: black;
+	padding-left: 2em;
+}
+
+#boxOrdineArt{
+	float: left;
+	text-align: left;
+	padding-top: 1em;
+	padding-left: 3em;
+}
+
+#boxArticolo{
+	float: left;
+	width: 10%;
+	height: 20%;
+	padding-top: 0.2em;
+	padding-left: 5em;
+	padding-bottom: 5em;
+	padding-right: 1em;
+}
+
+#titolo{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#autore {
+	font-size: 0.8em;
+	color: grey;
+}
+	
+	
+/*=======
+FOOTER
+========*/
+
+#footer{
+	border-top: 1px solid #ddd;/*Aggiungo l'ultimo bordino*/
+	font-style: italic;
+	padding: 0.5em;
+	float: left;
+	width: 99%;
+}
+
+#imgValidCSS{
+	float: right;
+	display: inline-block;
+}
+
+#imgValidCode{
+	float: left;
+	display: inline-block;
+}
+
+#footer img{
+	margin-left: 1.0em;
+	margin-right: 1.0em;
+	margin-bottom: 0.8em;
+}
+
+#footer p{
+	text-align: center;
+	font-size: 0.8em;
+}
