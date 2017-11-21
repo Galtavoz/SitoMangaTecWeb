@@ -43,17 +43,20 @@ SEZIONE HEADER
 	background-color: orange;
 	height: 4%;
 	width: 100%;
+	right: 0;
+	top: 0;
 }
 
 #logo{
 	float: left;/*Posiziona il logo a sinistra*/
+	padding-left: 2em;
 }
 
 #header h1{/*Indica tutti gli h1 contenuti nei div con id "header"*/
 	color: white;
 	font-size: 1.5em;/*N.B. tutte le dimensioni dei font vanno espresse in em per una questione di adattabilita*/
 	float: left;
-	padding-left: 1em;
+	padding-left: 2em;
 }
 
 #header p{
@@ -67,6 +70,9 @@ SEZIONE HEADER
 	padding-right: 2em;
 }
 
+/*=========
+VETRINA HOME
+==========*/
 
 #vetrina {
     padding-top: 4%;
@@ -86,8 +92,9 @@ SEZIONE HEADER
 #imgUsrLog {
 	padding-top: 4%;
 	height: 60%;
-	width: 30%;
+	max-width: 30%;
 	float: right;
+	vertical-align: middle;
 }
 
 #boxImgVetrina {
@@ -114,9 +121,11 @@ ARTICOLO
 
 #boxOrdineArt{
 	float: left;
-	text-align: left;
 	padding-top: 1em;
 	padding-left: 3em;
+	min-width: 90%;
+	max-width: 92%;
+	border-bottom: 1px solid #ddd;
 }
 
 #boxArticolo{
@@ -125,7 +134,7 @@ ARTICOLO
 	height: 20%;
 	padding-top: 0.2em;
 	padding-left: 5em;
-	padding-bottom: 5em;
+	padding-bottom: 2em;
 	padding-right: 1em;
 }
 
@@ -147,9 +156,8 @@ FOOTER
 #footer{
 	border-top: 1px solid #ddd;/*Aggiungo l'ultimo bordino*/
 	font-style: italic;
-	padding: 0.5em;
 	float: left;
-	width: 99%;
+	width: 100%;
 }
 
 #imgValidCSS{
