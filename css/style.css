@@ -12,7 +12,7 @@ html, body{ /*Il tag html va incluso per motivi di retrocompatibilita'*/
 	font-family: Verdana, Arial, Helvetica, sans-serif;/*Definisco i vari font disponibili*/
 	margin: auto;/*Imposto il calcolo del margin automatico*/
 	border: 1px solid #ddd;/*Implementazione del bordino grigio a dx e sx*/
-	background-color: 	#f5fffa;
+	background-color: 	#F5F5F5;
 }
 
 
@@ -291,9 +291,64 @@ PAGINE ARTICOLO
     padding: 2em;
 }
 
+#boxInfo h2{
+	font-size: 1.5em;
+	float: left;
+}
+
+#tr{
+	margin-bottom: 5em;
+}
+
 #imgArt{
 	height: inherit;
 	width: 20%;
+	float: left;
+	margin-right: 1.5em;
+}
+
+
+#boxInfo h3{
+	color: grey;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#boxDescriz{
+	margin: 1em;
+	margin-top: 0;
+}
+
+#boxTable{
+	font-size: 0.8em;
+	width: 60%;
+	float: left;
+	border-spacing: 0.5em;
+}
+
+#boxCapitoli{
+	max-width: inherit;
+	margin:auto;
+	width: 88em;
+    margin-top: 5em;
+    background: #ffffff;
+	padding: 2em;
+    padding-top: 1em;
+	height: 50em;
+	font-size: 0.8em;
+}
+
+#boxCap{
+	float: left;
+    width: 15em;
+    height: 2.5em;
+    border-bottom: 1px solid #ebe9e9;
+    padding-top: 2em;
+}
+
+#headerCap{
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
 
