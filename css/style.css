@@ -10,9 +10,15 @@ Definire il font
 */
 html, body{ /*Il tag html va incluso per motivi di retrocompatibilita'*/
 	font-family: Verdana, Arial, Helvetica, sans-serif;/*Definisco i vari font disponibili*/
-	max-width: 2048px;/*Massima larghezza dei contenuti*/
 	margin: auto;/*Imposto il calcolo del margin automatico*/
 	border: 1px solid #ddd;/*Implementazione del bordino grigio a dx e sx*/
+	background-color: 	#f5fffa;
+}
+
+
+#contenuto {	
+	max-width: 2048px;
+	margin: auto;
 }
 
 
@@ -31,13 +37,14 @@ SEZIONE HEADER
 
 #header{
 	position: fixed;
-	padding: 1.5em;/*Pensato per adattarsi alla dimensione del carattere*/
+	padding: 1.5em;
 	text-align: center;
 	background-color: orange;
 	height: 1.5em;
 	width: 100%;
 	top: 0;
 	font-size: 0.8em;
+	z-index: 2;
 }
 
 #logo{
@@ -87,33 +94,34 @@ VETRINA HOME
     background-size: 100% 100%;
     height: 60%;
 	float: left;
-	padding: 3em;
-	padding-left: 4em;
+	width: 100%;
 }
 
 #boxImgUsrLog {
-	margin-bottom: 0.7em;
-	height: 7em;
+	width: 17em;
+	float: left;
+	padding-bottom: 1em;
 }
 
 #imgUsrLog {
-	margin-top: 4em;
-	max-width: 30%;
-	float: right;
-	margin-right: 5em;
+	max-width: 2em;
+	float: left;
+	height: 7em;
+	margin-top: 5em;
+	margin-bottom: 5em;
 }
 
 #boxImgVetrina {
-	height: 60%;
-	width: 60%;
 	float: left;
+	margin: 5em;
+	margin-right: 1em;
+	margin-left: 10em;
+	max-width: 60%;
 }
 
 #boxPricipalImg {
-	margin-top: 4em;
-	height: 22em;
-	width: 40em;
-	margin-left: 7em;
+	height: 27em;
+	width: 47em;
 }
 	
 	
@@ -136,6 +144,15 @@ ARTICOLO
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 3em;
 }
+#boxOrdineArtPagine{
+	float: left;
+	margin-top: 6em;
+	margin-left: 4em;
+	min-width: 90%;
+	max-width: 92%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 3em;
+}
 
 #boxArticolo{
 	float: left;
@@ -148,14 +165,18 @@ ARTICOLO
 	height: 20em;
 }
 #boxArticoloPagine{
-	padding-top: 7em;
+	margin-top: 2em;
+	margin-left: 2em;
 	float: left;
 	height: 20%;
-	margin-top: 0.2em;
-	margin-left: 5em;
-	margin-bottom: 2em;
-	margin-right: 2em;
-	width: 8em;
+	width: 13em;
+	height: 23em;
+	background-color: white;
+	border: 0.5px solid #ddd;
+}
+
+#imgDimensione{
+	width: 13em;
 	height: 20em;
 }
 
@@ -175,18 +196,17 @@ TITOLI
 
 #titoloPagina{
 	position: fixed;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-weight: bold;
 	color: orange;
 	text-align: left;
 	border-bottom: 1.5px solid orange;
-	margin: 1.5em;
-	margin-top: 2.3em;
+	margin-top: 2.7em;
 	padding-left: 2em;
 	padding-bottom: 0.2em;
-	margin-left: 0;
 	width: 100%;
 	background-color: white;
+	height: 1em;
 }
 	
 	
@@ -227,20 +247,54 @@ ABOUT US
 ==========*/
 
 #sfondo{
-    background: url(../img/aboutUs.jpeg) no-repeat;
-    background-size: 100% 100%;
-	width: 100%;
-	height: 30em;
-	float: left;
-	margin-top: 3em;
+    width: 100%;
+    height: 100%;
 }
 
  #content{
-	width:60em;
-	height:50em;
-	background-color: white;
-	margin: 12em;
-	margin-top: 20em;
-	position: absolute;
+    background: #fff;
+    text-align: left;
+	width: 70em;
+	margin: auto;
+	margin-top: -8em;
+	margin-bottom: 2em;
+	padding: 3em;
+	position: relative;
+	font-family: 'Arial Normal', 'Arial';
+    font-weight: 1em;
+    font-style: normal;
  }
+ 
+ #top{
+	margin-top: 2em;
+    width: 100%;
+    height: 30em;
+ }
+ 
+ #content h2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+ }
+ 
+ 
+ /*=======
+PAGINE ARTICOLO
+========*/
+
+#boxInfo{
+	width: 70em;
+    height: 18em;
+	margin: auto;
+    margin-top: 5em;
+    background: #ffffff;
+    padding: 2em;
+}
+
+#imgArt{
+	height: inherit;
+	width: 20%;
+}
+
+
  
