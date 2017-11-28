@@ -37,12 +37,10 @@ SEZIONE HEADER
 
 #header{
 	position: fixed;
-	padding: 1.5em;
 	text-align: center;
 	background-color: orange;
-	height: 1.5em;
+	height: 7%;
 	width: 100%;
-	top: 0;
 	font-size: 0.8em;
 	z-index: 2;
 }
@@ -50,10 +48,10 @@ SEZIONE HEADER
 #logo{
 	float: left;/*Posiziona il logo a sinistra*/
 	margin-left: 2em;
-	margin-top: -0.5em;
-	margin-right: 2em;
+	margin-right: 1em;
 	height: 3em;
 	width: 10em;
+	padding-top:0.2em;
 }
 
 #header h1{/*Indica tutti gli h1 contenuti nei div con id "header"*/
@@ -116,7 +114,6 @@ VETRINA HOME
 	margin: 5em;
 	margin-right: 1em;
 	margin-left: 10em;
-	max-width: 60%;
 }
 
 #boxPricipalImg {
@@ -142,17 +139,15 @@ ARTICOLO
 	color: grey;
 	font-size: 0.8em;
 	font-weight: bold;
+	margin-right:1em;
 }
 
 
 #boxOrdineArt{
-	float: left;
 	padding-top: 1em;
-	margin-left: 1em;
-	min-width: 90%;
-	max-width: 92%;
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 3em;
+	float:left;
 }
 #boxOrdineArtPagine{
 	float: left;
@@ -165,15 +160,14 @@ ARTICOLO
 }
 
 #boxArticolo{
-	float: left;
-	height: 20%;
 	margin-top: 0.2em;
-	margin-left: 5em;
+	margin-left: 2em;
 	margin-bottom: 2em;
-	margin-right: 2em;
-	width: 8em;
-	height: 20em;
+	margin-right: 1em;
+	width: 13.8em;
+	float:left;
 }
+
 #boxArticoloPagine{
 	margin-top: 2em;
 	margin-left: 2em;
