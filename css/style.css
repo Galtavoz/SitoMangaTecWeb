@@ -81,7 +81,57 @@ SEZIONE HEADER
 	color: white;
 	font-size: 1.5em;
 	margin-right: 2em;
+	padding-top:0.5em;
 }
+
+/* ###########STILE PER MENU######################### */
+nav a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+nav a:hover {
+	background:#ec730f;
+}
+nav a:active {
+	position: relative;
+	top: 1px;
+}
+.menu a {
+	padding-top:0.6em;
+	padding-bottom:0.9em;
+	color: rgb(0,0,0);/* colore scritte menu*/
+	font-weight: 1em;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+/* ###########CONTENITORI PER MENU################## */
+#contentM{
+	position: relative;
+	height: 5.4em;
+	float:left;
+	
+}
+#menu{
+	text-align:center;
+	font-size: 0.9em;
+	font-weight: bold; 
+	overflow: hidden;
+	background-color: orange;
+	width: 100%;
+}
+/* ################################################# */
+/* ################################################# */
 
 /*=========
 VETRINA HOME
