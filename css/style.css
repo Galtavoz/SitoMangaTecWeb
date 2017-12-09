@@ -13,6 +13,7 @@ html, body{ /*Il tag html va incluso per motivi di retrocompatibilita'*/
 	margin: auto;/*Imposto il calcolo del margin automatico*/
 	border: 1px solid #ddd;/*Implementazione del bordino grigio a dx e sx*/
 	background-color: 	#F5F5F5;
+	overflow-x: hidden;
 }
 
 
@@ -39,7 +40,6 @@ SEZIONE HEADER
 	position: fixed;
 	text-align: center;
 	background-color: orange;
-	height: 7%;
 	width: 100%;
 	font-size: 0.8em;
 	z-index: 2;
@@ -95,7 +95,7 @@ nav a {
 	letter-spacing: 1px;
 	font-weight: 400;
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
-	font-size: 1.35em;
+	font-size: 1.30em;
 }
 nav a:hover {
 	background:#ec730f;
@@ -115,16 +115,20 @@ nav a:active {
 	transition: color 0.3s;
 }
 
+.space{
+margin-left:0.8em;
+}
+
 /* ###########CONTENITORI PER MENU################## */
 #contentM{
 	position: relative;
-	height: 5.4em;
 	float:left;
+	margin-left:2em;
 	
 }
 #menu{
 	text-align:center;
-	font-size: 0.9em;
+	font-size: 1em;
 	font-weight: bold; 
 	overflow: hidden;
 	background-color: orange;
@@ -337,12 +341,57 @@ ABOUT US
  /*=======
 PAGINE ARTICOLO
 ========*/
-
+#capitoli{
+	margin-top:1em;
+	height:3em;
+}
+.boxCapitoli{
+	max-width: inherit; margin-top:30px; background:#ffffff; padding-top:1px;
+}
+.capitoli{
+	position: relative; margin-bottom: 10px; 
+}
+.allcap{
+width:980px; min-height:40px; float:right;position: relative;padding-right:30px; padding-top:8px; 
+}
+.bottonecapspento{
+border:2px solid #eeeeee; color:#dddddd; font-weight: bold ;
+}
+#allcap{
+    float: left;
+    padding-right: 30px;
+    padding-top: 3.5px;
+	width: 980px;
+}
+#boxcapitoli{
+width:100%;
+float:left;
+}
+#bottonecapacceso{
+	float:left;
+	margin-left:1em;
+	width:4em;
+	background: #f89b33;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 1em Arial, Helvetica, sans-serif;
+	border: solid 1px #f89b33;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+#bottonecapspento{
+	border: 2px solid #eeeeee;
+    color: #dddddd;
+    font-weight: bold;
+}
 #boxInfo{
 	width: 70em;
     height: 21em;
 	margin: auto;
-    margin-top: 5em;
+    margin-top: 4em;
     background: #ffffff;
     padding: 2em;
 }
@@ -404,8 +453,10 @@ PAGINE ARTICOLO
 }
 
 #headerCap{
+	float:left;
 	font-size: 1.5em;
 	font-weight: bold;
+	width:5em;
 }
 
 #boxBtn{
@@ -436,7 +487,7 @@ PAGINE ARTICOLO
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	}
+}
 
 #pulsante:hover {
 	background: #0095cd;
@@ -453,42 +504,94 @@ PAGINE ARTICOLO
   top: 1px;
 }
  
-
- /*=======================================================
-	POPUP LOGIN/SIGNUP
-=========================================================/*
-
-/* The Modal (background) */
-.popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    width: 50em; /* Full width */
-    height: 20em; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: lightgrey;
+/* ################################################# */
+/* ################LOG IN########################### */
+#intestazione{
+    border-bottom: 1px solid #f3f2f0;
+    width: 31.375em;
+	margin-top: 2em;
+    margin-left: 2.5em;
 }
-
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.close{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/close3.png);
+    background-size: 40px 40px;
+    margin-left: 535px;
+    margin-top: -40px;
     cursor: pointer;
 }
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+.title{
+    font-size: 1.875em;
+    color: #6B6B6B;
+    text-align: left;
+    margin: 0px auto;
 }
+.title2{
+	font-size:24px;
+    height: 3.125em;
+    text-align: left;
+    margin: 0px auto;
+}
+.face{
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    width: 31.375em;
+    height: 3.125em;
+    text-align: center;
+    background: url(../img/face.png) #2c5795;
+    line-height: 3.125em;
+    margin: 0 auto;
+    border-radius: 0.313em;
+}
+#extlog{
+	width:40em;
+	height:36em;
+	position:absolute;
+	background-color:#FFFF;
+	margin-top:5em;
+	margin-left:23em;
+	display:block;
+}
+#boxform{
+	margin:2em 2.5em 0;
+	height:19em;
+}
+.input{
+	margin-top: 1.563em;
+    width: 34.375em;
+    height: 3.125em;
+    border: 1px solid #cbc7c2;
+    border-radius: 0.313em;
+    font-size: 1em;
+    color: #333333;
+    padding-left: 0.625em;
+}
+.submit{
+	margin-top: 1.6em;
+    width: 34.375em;
+    height: 3.125em;
+    background: rgba(117, 165, 181, 0.72);
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    line-height: 3.125em;
+    border-radius: 0.313em;
+}
+#tre{
+    font-size: 1em;
+    width: 34.375em;
+    text-align: center;
+	margin-left:2.5em
+}
+.last{
+    display: inline-block;
+}
+.blue{
+	display: inline-block;
+    color: #49BCEA;
+    cursor: pointer;
+}
+/* ################################################# */
