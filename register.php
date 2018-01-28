@@ -17,8 +17,7 @@
 		}
 	$dato = mysql_query($query);
 	while($val = mysql_fetch_array($dato)){
-		if($username==$val['user']){$err['count']++;
-		$err['password'] = array('errore' => 'Username gia usato');}
+		if($username==$val['user']) header("location:error.php");
 	}
 		if ($err['count'] === 0) {
 			mysql_query("INSERT INTO utenti(user,pass) VALUES ('$username',MD5('".$password."'))") or die(mysql_error());
