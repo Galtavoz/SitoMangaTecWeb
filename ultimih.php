@@ -12,9 +12,9 @@
 			while($val = mysql_fetch_array($dato) and $conta<5){
 				
 				echo"<div id=\"boxArticolo\">
-					<img src=\"$val[immagine]\">
+					<a href=\"articolo.php?cod=$val[codice]\"><img src=\"$val[immagine]\"></a>
 					<div id=\"titolo\">
-						<a href=\"articolo.html\">$val[nome]</a>
+						<a href=\"articolo.php?cod=$val[codice]\">$val[nome]</a>
 					</div>						
 					<div id=\"autore\">$val[autore]</div>
 				</div>";
