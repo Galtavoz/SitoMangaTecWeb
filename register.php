@@ -20,7 +20,7 @@
 		if($username==$val['user']) header("location:error.php");
 	}
 		if ($err['count'] === 0) {
-			mysql_query("INSERT INTO utenti(user,pass) VALUES ('$username',MD5('".$password."'))") or die(mysql_error());
+			mysql_query("INSERT INTO utenti(user,pass) VALUES ('$username','$password')") or die(mysql_error());
 				if(mysql_affected_rows()){
 					header("location:personal.php?nome=$username");
 
@@ -28,7 +28,7 @@
 
 				else{
 
-					echo"<div class=\"......\">Errore inserimento admin!</div>";
+					echo"<div class=\"......\">Errore inserimento utente!</div>";
 
 				}
 
