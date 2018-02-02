@@ -22,7 +22,9 @@
 		if ($err['count'] === 0) {
 			mysql_query("INSERT INTO utenti(user,pass) VALUES ('$username','$password')") or die(mysql_error());
 				if(mysql_affected_rows()){
-					header("location:personal.php?nome=$username");
+					session_start();
+					$_SESSION['user'] = $username;
+					header("location:personal.php");
 
 				}
 
