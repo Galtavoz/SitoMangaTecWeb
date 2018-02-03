@@ -25,8 +25,8 @@
 			</table>
 			<div id=\"boxBtn\">
 				<button id=\"pulsante\">Leggi</button>
-				<button id=\"pulsante\">Mi Piace</button>
-				<button id=\"pulsante\">Aggiungi a MyManga</button>
+				<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button id=\"pulsante\">Mi Piace</button></a>";
+				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button id=\"pulsante\">Aggiungi a MyManga</button></a>
 			</div>
 		
 			</div>";
