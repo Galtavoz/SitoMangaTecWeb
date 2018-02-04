@@ -17,6 +17,7 @@
 
     <!-- link al CSS -->
     <link rel="stylesheet" media="handheld, screen" href="css/style.css" />
+	<script type="text/javascript" src="js/modal_login.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -33,8 +34,58 @@
 			
 		</div>
 		<div id="login">
-			<a href="home.php?log=l">ACCCEDI</a> | <a href="home.php?log=s">REGISTRATI</a>
+			<a onclick="document.getElementById('id01').style.display='block'" ><noscript><a href="home.php?log=l" /></noscript>ACCEDI</a>
+			| <a onclick="document.getElementById('id01').style.display='block'" ><noscript><a href="home.php?log=s" /></noscript>REGISTRATI</a>
 		</div>
 		
     </div>
+			<!-- Codice di prova -->
+		<!-- The Modal -->
+	<div id="id01" class="modal">
+	<div class="cover">
+	<div id="extlog">
+			<div id="intestazione">
+			  <span onclick="document.getElementById('id01').style.display='none'" 
+			class="close1" title="Close Modal">&times;</span>
+				<p class="title">Login ZingBox <a href= "home.php"></a></p>
+				<p class= "title2">Read comics on ZingBox</p>
+			</div>
+			<div id= "boxform">
+				<h1>Login ZingBox</h1>
+				<form method= "POST" action= "second.php">
+					<input class= "input" type= "text" name= "username" placeholder= "Username">
+					<input class= "input" type= "password" name= "password" placeholder= "Passowrd">
+					<input class= "submit" type= "submit" value= "Accedi">
+				</form>
+			</div>
+			<div id="tre">
+				<p class="last">Non hai un account?<a href="home.php?log=s"><span class= "blue">SignIn</span></a></p>
+			</div>
+	</div>
+	</div>
+	</div>
+	<div id="id02" class="modal">
+	<div class="cover">
+		<div id="extlog">
+			<div id="intestazione">
+				<p class="title">SignIn ZingBox <a href="home.php"><span class="close"/></a></p>
+				<p class="title2">Read comics on ZingBox</p>
+				<div class="face">SignIn whit Facebook</div>
+			</div>
+			<div id="boxform">
+				<h1>SignIn ZingBox</h1>
+				<form method="POST" action="register.php">
+					<input class="input" type="text" name="username" placeholder="Username">
+					<input class="input" type="password" name="password" placeholder="Passowrd">
+					<input class="submit" type="submit" value="Registrati">
+				</form>
+			</div>
+			<div id="tre">
+				<p class="last">Hai già un account?<a href="home.php?log=l"><span class="blue">LogIn</span></a></p>
+			</div>
+		</div>
+	</div>
+	</div>
+
+<!-- Fine codice di prova -->
 	<div id="contenuto">
