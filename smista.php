@@ -12,9 +12,7 @@
 			case 'preferiti':
 				$query=mysql_query("SELECT * FROM manga WHERE codice=$_GET[cod]");
 				$dato=mysql_fetch_array($query);
-				$query2=mysql_query("SELECT * FROM utenti WHERE user = $n");
-				$var=mysql_fetch_array($query2);
-				$query3=mysql_query("INSERT INTO preferiti(nome,utente) VALUES ('$dato[nome]','$var[user]')");
+				$query2=mysql_query("INSERT INTO preferiti (nome,utente) VALUES ('$dato[nome]', '$n')");
 				header("location:articolo.php?cod=$_GET[cod]");
 			break;
 	}
