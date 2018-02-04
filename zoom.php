@@ -6,7 +6,7 @@
 				echo"<div id=\"boxInfo\">
 				<img class=\"imgzoom\" src=\"$val[immagine]\" \>
 				
-					<h2>$var[nome]</h2><br><br>
+					<h2>$val[nome]</h2><br><br>
 				<table id=\"boxTable\">
 				<tr>
 					<td><h3>Author: &nbsp </h3> $val[autore]</td>
