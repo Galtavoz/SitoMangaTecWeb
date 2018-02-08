@@ -25,8 +25,8 @@
 			</table>
 			<div id=\"boxBtn\">
 				<button id=\"pulsante\">Leggi</button>
-				<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button id=\"pulsante\">Mi Piace</button></a>";
-				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button id=\"pulsante\">Aggiungi a MyManga</button></a>";
+				<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
+				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button onclick=\"preferiti()\" id=\"pulsante\">Aggiungi a MyManga</button></a>";
 			echo"</div>
 		
 			</div>";
@@ -38,7 +38,8 @@
 				$conta=$val['capitoli'];
 				$flag=true;
 				while($conta>0 && $flag){
-						echo"<div id=\"bottonecapacceso\">";
+						if ($conta==$val['capitoli']) echo"<div class=\"bottonecapacceso\">";
+						else echo"<div onclick=\"highlight($conta)\" id=$conta class=\"bottonecapspento\">";
 						echo"$conta"; echo" - "; $x=$conta-99 ;if($conta>99)echo"$x";else echo"1"; 
 						echo"</div>";
 						if($conta==0) flag==false;

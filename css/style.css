@@ -372,7 +372,8 @@ width:980px; min-height:40px; float:right;position: relative;padding-right:30px;
 width:100%;
 float:left;
 }
-#bottonecapacceso{
+
+.bottonecapacceso{
 	float:left;
 	margin-left:1em;
 	width:5em;
@@ -387,11 +388,11 @@ float:left;
 	border-radius: 8px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-#bottonecapspento{
+.bottonecapspento{
     
 	float:left;
 	margin-left:1em;
-	width:4em;
+	width:5em;
 	background: #999999;
 	color: #fff;
 	outline: none;
