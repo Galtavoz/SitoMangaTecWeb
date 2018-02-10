@@ -36,10 +36,14 @@
 			<p id=\"headerCap\"> Capitoli</p>
 			<div id=\"allcap\">";
 				$conta=$val['capitoli'];
+				$z= $_GET['cod'];
 				$flag=true;
 				while($conta>0 && $flag){
-						if ($conta==$val['capitoli']) echo"<div class=\"bottonecapacceso\">";
-						else echo"<div onclick=\"highlight($conta)\" id=$conta class=\"bottonecapspento\">";
+						if (isset($_GET['inizio']))
+							if($conta==$_GET['inizio']) echo"<div onclick=\"highlight($conta,$z)\" id=$conta  class=\"bottonecapacceso\">";
+							else echo"<div onclick=\"highlight($conta, $z)\" id=$conta class=\"bottonecapspento\">";
+						else if ($conta==$val['capitoli']) echo"<div onclick=\"highlight($conta,$z)\" id=$conta  class=\"bottonecapacceso\">";
+						else echo"<div onclick=\"highlight($conta, $z)\" id=$conta class=\"bottonecapspento\">";
 						echo"$conta"; echo" - "; $x=$conta-99 ;if($conta>99)echo"$x";else echo"1"; 
 						echo"</div>";
 						if($conta==0) flag==false;
@@ -49,11 +53,17 @@
 				}
 			echo"</div>
 		</div>";
-		/* for($conta=$k;$conta>$k-99;$conta--){
-		echo"<div id=\"boxcapitoli\">
-			<div id=\"boxCap\">";
-				echo"$conta "; echo"$[capitolo]";
-		}	 
-		</div>*/	
+	 if(isset($_GET['inizio'])){
+		$h=$_GET['inizio'];
+				if($h>99)$query=mysql_query("SELECT * FROM capitoli INNER JOIN manga ON capitoli.nome = manga.nome WHERE capitoli.numero<=id AND capitoli.numero>id-99 ORDER BY capitoli.numero DESC");
+				else $query=mysql_query("SELECT * FROM capitoli INNER JOIN manga ON capitoli.nome = manga.nome WHERE capitoli.numero<=id AND manga.codice=$_GET[cod] ORDER BY capitoli.numero DESC");
+				while(mysql_fetch_array($query)){
+					echo"<div id=\"boxcapitoli\">
+						<div id=\"boxCap\">
+							
+						</div>
+					</div>";
+				}
+	}
 	echo"</div>";
 	?>

@@ -16,10 +16,14 @@ function logout() {
 	}
 }
 
-function highlight(id) {
-	alert(id);
-    var element = document.getElementById(id);
-    element.class = "bottonecapacceso";
+function highlight(id, codice) {
+	var elements = document.getElementsByClassName("bottonecapacceso");
+	for(var i=0; i<elements.length; i++) {
+		elements[i].className = "bottonecapspento";
+	}
+	var element = document.getElementById(id);
+	element.className = "bottonecapacceso";
+	window.location.replace("articolo.php?cod="+codice+"&inizio="+id+"#boxCapitoli");
 }
 
 

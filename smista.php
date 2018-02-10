@@ -15,4 +15,6 @@
 				$query2=mysql_query("INSERT INTO preferiti (nome,utente) VALUES ('$dato[nome]', '$n')");
 				header("location:articolo.php?cod=$_GET[cod]");
 			break;
+			
 	}
+	
