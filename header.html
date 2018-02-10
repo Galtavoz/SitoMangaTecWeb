@@ -34,8 +34,8 @@
 			
 		</div>
 		<div id="login">
-			<a onclick="document.getElementById('id01').style.display='block'" ><noscript><a href="home.php?log=l" /></noscript>ACCEDI</a>
-			| <a onclick="document.getElementById('id01').style.display='block'" ><noscript><a href="home.php?log=s" /></noscript>REGISTRATI</a>
+			<a onclick="logsign('id01')" ><noscript><a href="home.php?log=l" /></noscript>ACCEDI</a>
+			| <a onclick="logsign('id02')" ><noscript><a href="home.php?log=s" /></noscript>REGISTRATI</a>
 		</div>
 		
     </div>
@@ -43,9 +43,8 @@
 	<div class="cover">
 	<div id="extlog">
 			<div id="intestazione">
-			  <span onclick="document.getElementById('id01').style.display='none'" 
-			class="close1" title="Close Modal">&times;</span>
-				<p class="title">Login ZingBox <a href= "home.php"></a></p>
+				<p class="title">Login ZingBox <a href= "home.php">	</a><span onclick="document.getElementById('id01').style.display='none'" 
+			class="close1" title="Close Modal">&times;</span></p>
 				<p class= "title2">Read comics on ZingBox</p>
 			</div>
 			<div id= "boxform">
@@ -57,7 +56,7 @@
 				</form>
 			</div>
 			<div id="tre">
-				<p class="last">Non hai un account?<a href="home.php?log=s"><span class= "blue">SignIn</span></a></p>
+				<p class="last">Non hai un account?<a onclick="logsign('id02')" ><span class="blue"><noscript><a href="home.php?log=s" /></noscript>SignIn</span></a></p>
 			</div>
 	</div>
 	</div>
@@ -66,9 +65,9 @@
 	<div class="cover">
 		<div id="extlog">
 			<div id="intestazione">
-				<p class="title">SignIn ZingBox <a href="home.php"><span class="close"/></a></p>
+				<p class="title">SignIn ZingBox <a href="home.php"></a><span onclick="document.getElementById('id02').style.display='none'" 
+			class="close1" title="Close Modal">&times;</span></p>
 				<p class="title2">Read comics on ZingBox</p>
-				<div class="face">SignIn whit Facebook</div>
 			</div>
 			<div id="boxform">
 				<h1>SignIn ZingBox</h1>
@@ -79,7 +78,8 @@
 				</form>
 			</div>
 			<div id="tre">
-				<p class="last">Hai già un account?<a href="home.php?log=l"><span class="blue">LogIn</span></a></p>
+				<p class="last">Hai già un account?	<a onclick="logsign('id01')" ><span class="blue"><noscript><a href="home.php?log=l" /></noscript>LogIn</span></a>
+</p>
 			</div>
 		</div>
 	</div>

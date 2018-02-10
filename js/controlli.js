@@ -26,4 +26,15 @@ function highlight(id, codice) {
 	window.location.replace("articolo.php?cod="+codice+"&inizio="+id+"#boxCapitoli");
 }
 
+function logsign(id) {
+	if(id=="id01"){
+		document.getElementById('id01').style.display='block';
+		document.getElementById('id02').style.display='none';
+	}
+	else {
+		document.getElementById('id01').style.display='none';
+		document.getElementById('id02').style.display='block';		
+	}
+}
+
 
