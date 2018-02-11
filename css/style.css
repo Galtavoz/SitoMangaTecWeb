@@ -41,7 +41,7 @@ SEZIONE HEADER
 #header{
 	position: fixed;
 	text-align: center;
-	background-color: orange;
+	background-color: rgb(208,6,12);
 	width: 100%;
 	font-size: 0.8em;
 	z-index: 2;
@@ -102,7 +102,7 @@ nav a {
 	font-size: 1.30em;
 }
 nav a:hover {
-	background:#ec730f;
+	background:rgb(255,34,51);
 }
 nav a:active {
 	position: relative;
@@ -135,7 +135,7 @@ margin-left:0.8em;
 	font-size: 1em;
 	font-weight: bold; 
 	overflow: hidden;
-	background-color: orange;
+	background-color: rgb(208,6,12);
 	width: 100%;
 }
 
