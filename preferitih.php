@@ -1,7 +1,7 @@
 <div id="boxOrdineArt">
 	<div id="boxTitolo">
 		Preferiti
-		<div id="boxMore"><a href="Popular.php"> more&nbsp></a> </div>
+		<div id="boxMore"><a class="stil" href="Popular.php"> more&nbsp></a> </div>
 	</div>
 
 		<?php
@@ -15,7 +15,7 @@
 				echo"<div id=\"boxArticolo\">
 					<a href=\"articolo.php?cod=$val[codice]\"><img src=\"$val[immagine]\"></a>
 					<div id=\"titolo\">
-						<a href=\"articolo.php?cod=$val[codice]\">$val[nome]</a>
+						<a class=\"stil\" href=\"articolo.php?cod=$val[codice]\">$val[nome]</a>
 					</div>						
 					<div id=\"autore\">$val[autore]</div>
 				</div>";

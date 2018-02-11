@@ -23,8 +23,8 @@ include("csrf.php");
 						<input type="text" name="capitoli" value="<?=$dato['capitoli']?>" />
 						<label>Ultimo</label>
 						<input type="text" name="ultimo" value="<?=$dato['ultimo']?>" />
-						<label>Commenti</label>
-						<input type="text" name="commenti" value="<?=$dato['commenti']?>" />
+						<label>Finito(1 si,0 no)</label>
+						<input type="text" name="commenti" value="<?=$dato['finito']?>" />
 						<label>Mi piace</label>
 						<input type="text" name="mipiace" value="<?=$dato['mipiace']?>" />
 						<label>Immagine Manga</label>

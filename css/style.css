@@ -155,6 +155,11 @@ width:18em;
 height:10em;
 
 }
+.stil{
+
+color:black;
+}
+
 /* ################################################# */
 
 /*=========
@@ -486,8 +491,11 @@ float:left;
 	width: 60%;
 	float: left;
 	border-spacing: 0.5em;
+	margin-left:2em;
 }
-
+.ff{
+margin-left:1em;
+}
 #boxCapitoli{
 	max-width: inherit;
 	margin:auto;
@@ -534,6 +542,7 @@ float:left;
 	padding: 1em 2em;
 	border: solid 1px #0076a3;
 	margin-right: 2em;
+	margin-left:1em;
 	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
 	background: -webkit-linear-gradient(top,  #00adee,  #0078a5);
 	background: -moz-linear-gradient(top,  #00adee,  #0078a5);

@@ -12,7 +12,7 @@
 					echo"<div id=\"boxArticoloPagine\">
 					<img src=\"$val[immagine]\">
 					<div id=\"titolo\">
-						<a href=\"articolo.php?cod=$val[codice]\">$val[nome]</a>
+						<a class=\"stil\" href=\"articolo.php?cod=$val[codice]\">$val[nome]</a>
 					</div>						
 					<div id=\"autore\">$val[autore]</div>
 				</div>";

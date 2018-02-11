@@ -1,21 +1,20 @@
 <?php
 				require("config.php");
 				$query = "SELECT * FROM manga WHERE codice=$_GET[cod]";
+				
 				$dato = mysql_query($query);
 				$val=mysql_fetch_array($dato);
 				echo"<div id=\"boxInfo\">
-				<img class=\"imgzoom\" src=\"$val[immagine]\" \>
+				<img class=\"imgzoom\" src=\"$val[immagine]\" alt=\"immagine copertina $val[nome]\" title=\"immagine copertina $val[nome]\" \>
 				
-					<h2>$val[nome]</h2><br><br>
+					<h2 class=\"ff\">$val[nome]</h2><br><br>
 				<table id=\"boxTable\">
 				<tr>
 					<td><h3>Author: &nbsp </h3> $val[autore]</td>
-					<td><h3>Status:</h3>"; if($val['fine']!=NULL) echo"&nbspOngoing"; else echo"&nbsp Ended";echo"</td>
-					<td><h3>Category:</h3>...</td>
+					<td><h3>Status:</h3>"; if($val['finito']="0") echo"&nbspOngoing"; else echo"&nbspEnded";echo"</td>
 				</tr>
 				<tr>
 					<td><h3>Update:</h3> $val[ultimo]</td>
-					<td><h3>Comment:</h3> &nbsp $val[commenti]</td>
 					<td><h3>Like:</h3> &nbsp $val[mipiace]</td>
 				</tr>
 				
@@ -24,8 +23,12 @@
 				</tr>
 			</table>
 			<div id=\"boxBtn\">
-				<button id=\"pulsante\">Leggi</button>
-				<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
+			
+				";
+				$us=isset($_SESSION['user']);
+				$query2=mysql_query("SELECT * FROM mipiace WHERE manga=$val[nome] and utente=us");
+				if($_SESSION)if($query2) echo"malick gay";
+				else echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
 				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button onclick=\"preferiti()\" id=\"pulsante\">Aggiungi a MyManga</button></a>";
 			echo"</div>
 		
