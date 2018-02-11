@@ -31,7 +31,7 @@ $opts = array(
 	'roots' => array(
 		array(
 			'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-			'path'          => '../../../capitoli',         // path to files (REQUIRED) ../../../img/
+			'path'          => '../../../file',         // path to files (REQUIRED) ../../../img/
 			'URL'           => 'http://localhost/Manga', // URL to files (REQUIRED)
 			'accessControl' => 'access'            // disable and hide dot starting files (OPTIONAL)
 		)

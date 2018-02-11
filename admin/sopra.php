@@ -30,8 +30,6 @@
 						<ul class="nav pull-right">      
 							<li class="dropdown">           
 								<div class="dropdown-menu">
-									<li><a href="form_reset_psw.php"><i class="icon-lock"></i> Cambia password</a></li>
-									<li class="divider"></li>  
 									<li><a href="logout.php"><i class="icon-off"></i> Logout</a></li>      
 								</div>
 							</li>

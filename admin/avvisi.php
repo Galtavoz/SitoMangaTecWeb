@@ -12,13 +12,12 @@ include("sopra.php");
 							$query= mysql_query("SELECT * FROM manga") or die(mysql_error());
 							if(mysql_num_rows($query)){
 								echo'
-									<tr><th>Titolo</th><th>Autore</th><th>Capitoli</th><th>Commenti</th><th>Mi Piace</th><th>Immagine</th><th>Modifica</th><th>Elimina</th></tr>';
+									<tr><th>Titolo</th><th>Autore</th><th>Capitoli</th><th>Mi Piace</th><th>Immagine</th><th>Modifica</th><th>Elimina</th></tr>';
 								while($dato=mysql_fetch_array($query)){
 									echo"<tr>
 											<td style=\"color: #0088CC;\">$dato[nome]</td>
 											<td>$dato[autore]</td>
 											<td>$dato[capitoli]</td>
-											<td>$dato[commenti]</td>
 											<td>$dato[mipiace]</td>
 											<td>$dato[immagine]</td>
 											";
