@@ -9,7 +9,7 @@ function preferiti() {
 function logout() {
 	var result = confirm("Vuoi continuare con il logout?");
 	if (result) {
-		window.open("logout.php");
+		window.location.replace("logout.php");
 	}
 	else {
 		location.reload();

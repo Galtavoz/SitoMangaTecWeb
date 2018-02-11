@@ -3,5 +3,5 @@ session_start();
 $_SESSION = array();
 session_unset();
 session_destroy();
-header('location:home.php');
+echo"<meta http-equiv=\"refresh\" content=\"0; url=home.php\">";
 ?>

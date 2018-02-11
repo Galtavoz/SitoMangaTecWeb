@@ -24,49 +24,21 @@
 			</table>
 			<div id=\"boxBtn\">
 			
-				";
+				
+				<a href=\"capitoli.php?cod=$_GET[cod]\"><button id=\"pulsante\">Leggi</button></a>";
 				$us=isset($_SESSION['user']);
-				$query2=mysql_query("SELECT * FROM mipiace WHERE manga=$val[nome] and utente=us");
-				if($_SESSION)if($query2) echo"malick gay";
-				else echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
+				$a=$val['nome'];
+				$query2="SELECT COUNT(*) as A FROM mipiace WHERE manga='$a' and utente='$us'";
+				$query3="SELECT COUNT(*) FROM preferiti WHERE nome='$a' and utente='$us'";
+				$dato=mysql_query($query2);
+				$dato2=mysql_query($query3);
+				$ris=mysql_fetch_array($dato);
+				echo $ris['A'];
+				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
 				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button onclick=\"preferiti()\" id=\"pulsante\">Aggiungi a MyManga</button></a>";
 			echo"</div>
 		
 			</div>";
-	echo"
-	<div id=\"boxCapitoli\">
-		<div id=\"capitoli\">
-			<p id=\"headerCap\"> Capitoli</p>
-			<div id=\"allcap\">";
-				$conta=$val['capitoli'];
-				$z= $_GET['cod'];
-				$flag=true;
-				while($conta>0 && $flag){
-						if (isset($_GET['inizio']))
-							if($conta==$_GET['inizio']) echo"<div onclick=\"highlight($conta,$z)\" id=$conta  class=\"bottonecapacceso\">";
-							else echo"<div onclick=\"highlight($conta, $z)\" id=$conta class=\"bottonecapspento\">";
-						else if ($conta==$val['capitoli']) echo"<div onclick=\"highlight($conta,$z)\" id=$conta  class=\"bottonecapacceso\">";
-						else echo"<div onclick=\"highlight($conta, $z)\" id=$conta class=\"bottonecapspento\">";
-						echo"$conta"; echo" - "; $x=$conta-99 ;if($conta>99)echo"$x";else echo"1"; 
-						echo"</div>";
-						if($conta==0) flag==false;
-						else $conta-=100;
-						$k=$conta;
-						
-				}
-			echo"</div>
-		</div>";
-	 if(isset($_GET['inizio'])){
-		$h=$_GET['inizio'];
-				if($h>99)$query=mysql_query("SELECT * FROM capitoli INNER JOIN manga ON capitoli.nome = manga.nome WHERE capitoli.numero<=id AND capitoli.numero>id-99 ORDER BY capitoli.numero DESC");
-				else $query=mysql_query("SELECT * FROM capitoli INNER JOIN manga ON capitoli.nome = manga.nome WHERE capitoli.numero<=id AND manga.codice=$_GET[cod] ORDER BY capitoli.numero DESC");
-				while(mysql_fetch_array($query)){
-					echo"<div id=\"boxcapitoli\">
-						<div id=\"boxCap\">
-							
-						</div>
-					</div>";
-				}
-	}
+	
 	echo"</div>";
 	?>

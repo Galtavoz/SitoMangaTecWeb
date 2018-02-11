@@ -701,7 +701,64 @@ margin-left:1em;
 /* ################################################# */
 .centerb{text-align:center;font-weight:bold;}
 
-
+	
+/* ##################CAPITOLI#################### */
+	#list{
+		margin: 5em 0 10px;
+		overflow: hidden;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		z-index: -1;
+		background: #f7f7f7;
+		box-shadow: 0px 0px 1px #fff, inset 0px 0px 8px #777;
+		-webkit-box-shadow: 0px 0px 1px #fff, inset 0px 0px 8px #777;
+		-moz-box-shadow: 0px 0px 1px #fff, inset 0px 0px 8px #777;
+		padding: 6px 5px;
+	}
+	#titolone{
+		    margin: 0px 0px 10px;
+    position: relative;
+    font-size: 17px;
+    padding: 6px 8px;
+    color: #ddd;
+    background: #333;
+    box-shadow: 0px 0px 1px #ddd, 0px 0px 3px #888, inset 0px 0px 8px #222;
+    -webkit-box-shadow: 0px 0px 1px #ddd, 0px 0px 3px #888, inset 0px 0px 8px #222;
+    -moz-box-shadow: 0px 0px 1px #ddd, 0px 0px 3px #888, inset 0px 0px 8px #222;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-shadow: none;
+	}
+	#group{
+		margin-top: 8px;
+    padding: 0 2px 5px 5px;
+    position: relative;
+    overflow: hidden;
+	}
+	#tittit{
+		text-align: left;
+		font-weight: bold;
+		font-size: 16px;
+		border-bottom: 1px solid #666;
+		font-weight: bolder;
+		font-size: 14pt;
+		color: #D54A4A;
+	}
+	#capitol{
+		position: relative;
+		padding: 3px 10px 3px 10px;
+		overflow: hidden;
+		border-bottom: 1px dashed #666;
+	}
+	#s{
+		float:left
+	}
+	#d{
+		float:right;
+	}
+/* ################################################# */
 
 
 
