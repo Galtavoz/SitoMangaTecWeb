@@ -1,7 +1,7 @@
 <div id="boxOrdineArt">
 		<div id="boxTitolo">
 			Ultimi Caricamenti
-			<div id="boxMore"><a href="Latest.html"> more&nbsp></a> </div>
+			<div id="boxMore"><a href="Latest.php"> more&nbsp></a> </div>
 			</div>
 		<?php
 			require("config.php");
