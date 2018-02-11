@@ -132,9 +132,9 @@ $err['count'] = 0;
 				$err['nomecap'] = array('errore' => 'Nome capitolo non inserito');
 			}
 			if ($err['count'] === 0) {
-				$first=mysql_query("SELECT * FROM capitoli WHERE nome='$titolo'");
+				$first=mysql_query("SELECT MAX(numero) as massimo FROM capitoli WHERE nome='$titolo'");
 				$ris=mysql_fetch_array($first);
-				$numero=$ris['numero']+1;
+				$numero=$ris['massimo']+1;
 				$data=date("Y/m/d", time());
 				$query=mysql_query("INSERT INTO `capitoli` (`nome`, `numero`, `nomecap`, `dataagg`) VALUES ('$titolo', '$numero', '$nomecap','$data')") or die(mysql_error());
 				if($query){
