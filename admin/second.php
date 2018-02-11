@@ -33,7 +33,7 @@ $_GET = cleanRequest($_GET);
 
 	
 	
-	$query = mysql_query("SELECT * FROM admin WHERE user='$username' and pass='$password'");
+	$query = mysql_query("SELECT * FROM admin WHERE user='$username' and pass= '".md5($password)."'");
 	$n=mysql_affected_rows();
 	if(!$query && $n!=1){
 		die('Nome utente o password sbagliata');
