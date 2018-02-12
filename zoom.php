@@ -26,16 +26,17 @@
 			
 				
 				<a href=\"capitoli.php?cod=$_GET[cod]\"><button id=\"pulsante\">Leggi</button></a>";
-				$us=isset($_SESSION['user']);
+				$us=$_SESSION['user'];
 				$a=$val['nome'];
 				$query2="SELECT COUNT(*) as A FROM mipiace WHERE manga='$a' and utente='$us'";
-				$query3="SELECT COUNT(*) FROM preferiti WHERE nome='$a' and utente='$us'";
-				$dato=mysql_query($query2);
-				$dato2=mysql_query($query3);
-				$ris=mysql_fetch_array($dato);
-				echo $ris['A'];
-				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
-				if($_SESSION)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button onclick=\"preferiti()\" id=\"pulsante\">Aggiungi a MyManga</button></a>";
+				$query3="SELECT COUNT(*) as B FROM preferiti WHERE nome='$a' and utente='$us'";
+				$dato2=mysql_query($query2);
+				$dato3=mysql_query($query3);
+				$ris=mysql_fetch_array($dato2);
+				$var=mysql_fetch_array($dato3);
+				if($_SESSION)if($ris['A']<1)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=mipiace\"><button onclick=\"mipiace()\" id=\"pulsante\">Mi Piace</button></a>";
+				if($_SESSION)if($var['B']<1)echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=preferiti\"><button onclick=\"preferiti()\" id=\"pulsante\">Aggiungi a MyManga</button></a>";
+				else if($_SESSION) echo"<a href=\"smista.php?cod=$_GET[cod]&tipo=rpreferiti\"><button onclick=\"rpreferiti()\" id=\"pulsante\">Rimuovi da MyManga</button></a>";
 			echo"</div>
 		
 			</div>";

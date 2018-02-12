@@ -16,6 +16,12 @@
 				$query2=mysql_query("INSERT INTO preferiti (nome,utente) VALUES ('$dato[nome]', '$n')");
 				header("location:articolo.php?cod=$_GET[cod]");
 			break;
+			case 'rpreferiti':
+				$query=mysql_query("SELECT * FROM manga WHERE codice=$_GET[cod]");
+				$dato=mysql_fetch_array($query);
+				$query2=mysql_query("DELETE FROM preferiti WHERE nome='$dato[nome]'");
+				header("location:articolo.php?cod=$_GET[cod]");
+			break;
 			
 	}
 	

@@ -5,7 +5,9 @@ function mipiace() {
 function preferiti() {
 	window.alert("Hai aggiunto l'articolo ai preferiti!");
 }
-
+function rpreferiti() {
+	window.alert("Hai rimosso l'articolo ai preferiti!");
+}
 function logout() {
 	var result = confirm("Vuoi continuare con il logout?");
 	if (result) {
